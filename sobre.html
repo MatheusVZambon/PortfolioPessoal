@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Matheus Zambon - Sobre</title>
+    <script src="https://kit.fontawesome.com/2936791d42.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="media/bc_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <section class="sec_sidebar">
+            <div class="div_intro">
+                <h1 class="h1_sb_name">Matheus Vieira Zambon</h1>
+                <nav class="nav_sb">
+                    <ul class="ul_nav_sb">
+                        <li class="li_ul_sb"><a href="index.html" class="a_ul_sb"><i class="fa-solid fa-file-code"></i>PROJETOS</a></li>
+                        <li class="li_ul_sb"><a href="sobre.html" class="a_ul_sb"><i class="fa-solid fa-circle-user"></i>SOBRE MIM</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="div_menu">
+                <h2 class="h2_tab_ctt">CONTATOS</h2>
+                <div class="div_tab_ctt">
+                    <button id="dflt" class="btn_tab_ctt" onclick="expandir(event, 'github')"><i class="fa-brands fa-github"></i></button>
+                    <button class="btn_tab_ctt" onclick="expandir(event, 'linkedin')"><i class="fa-brands fa-linkedin"></i></button>
+                    <button class="btn_tab_ctt" onclick="expandir(event, 'telefone')"><i class="fa-solid fa-phone"></i></button>
+                    <button class="btn_tab_ctt" onclick="expandir(event, 'email')"><i class="fa-solid fa-envelope"></i></button>
+                </div>
+                <div id="github" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">GITHUB</h3>
+                    <p class="p_ctt"><a href="https://github.com/MatheusVZambon" class="a_ctt" target="blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+                <div id="linkedin" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">LINKEDIN</h3>
+                    <p class="p_ctt"><a href="https://www.linkedin.com/in/matheus-zambon/" class="a_ctt" target="blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+                <div id="telefone" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">TELEFONE</h3>
+                    <p class="p_ctt">+55 (11) 96075-7455</p>
+                </div>
+                <div id="email" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">EMAIL</h3>
+                    <p class="p_ctt">matheuszambon2004@gmail</p>
+                </div>
+            </div>
+        </section>
+        <div class="div_pgname">
+            <h1 class="h1_page">Sobre Mim</h1>
+        </div>
+        <section class="sec_sobre">
+            <article class="art_sobre_img">
+                <img src="media/img_sobre.jpeg" alt="" class="img_sobre">
+            </article>
+            <article class="art_sobre_txt">
+                <h3 class="h3_ttl_sobre">Um pouco sobre mim</h3>
+                <p class="p_desc_sobre">Aspirante a front-end dev que reside em Jundiaí. Busco começar a carreira neste setor que tanto me agradou até aqui. </p><p class="p_desc_sobre">Tenho contato com programação desde meus 15 anos, admito que não foi a melhor experiência logo de cara, mas depois de um pouco de foco e tentativas, comecei a realmente me sentir feliz escrevendo algumas linhas de código e vendo o resultado, infelizmente deixei a programação de lado por um tempo, mas agora (formado e sem demandas escolares) quero voltar melhor do que nunca!</p><p class="p_desc_sobre">Adoro ter a chance de combinar diversos elementos e no fim, gerar um resultado agradável. Mesmo sendo um iniciante, sinto que já evolui demais desde o começo, e me sinto empolgado para alcançar níveis ainda melhores.</p>
+            </article>
+        </section>
+        <section class="sec_sobre_comp">
+            <h3 class="h3_ttl_comp">Habilidades e Competências</h3>
+            <div class="div_comp">
+                <div class="div_comp_frame"><i class="fa-brands fa-css3-alt"></i><p class="comp_name">CSS</p></div>
+                <div class="div_comp_frame"><i class="fa-brands fa-html5"></i><p class="comp_name">HTML</p></div>
+                <div class="div_comp_frame"><i class="fa-brands fa-js"></i><p class="comp_name">JavaScript</p></div>
+                <div class="div_comp_frame"><i class="fa-brands fa-wordpress"></i><p class="comp_name">WordPress</p></div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="sidebar_ctt.js"></script>
+</body>
+</html>

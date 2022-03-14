@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('fonts/idroid.otf') format('opentype');    
+}
+
+:root{
+    --emerald   : #30D680;
+    --dark_eme  : #218B54;
+    --indigo    : #391463;
+    --rhythm    : #817E9F;
+    --lght_rhy  : #b4b0e0;
+    --white     : #FFFFFF;
+    --black     : #000000;
+    
+    --ft_ss     : 'Raleway','Helvetica Neue',sans-serif;
+    --ft_sf     : 'Playfair Display','Times New Roman',serif;
+    --ft_sp     : 'Android','Helvetica Neue',sans-serif;
+}
+
+*{
+    margin:0em;
+    padding:0em;
+}
+
+html{
+    background-color: var(--lght_rhy);
+}
+
+body{
+    min-width: 320px;
+    max-width: 1250px;
+}
+
+header{
+    padding-top: 20px;
+    min-height: 100px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--emerald), var(--dark_eme));
+}
+
+header > h1{
+    padding-bottom: 15px;
+    font-size: 35px;
+}
+
+header,nav{
+    color: var(--white);
+}
+
+#p_header{
+    font-family: var(--ft_ss);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: none;
+    text-align: center;
+}
+
+#tbl_header{
+    margin: auto;
+}
+
+#tbl_header > tbody > tr > td{
+    border-right: 15px solid transparent;
+}
+
+nav{
+    background-color: var(--dark_eme);
+    border-top: 4px solid var(--emerald);
+}
+
+#tbl_nav{
+    background-color: var(--dark_eme);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tbl_nav > tbody > tr > td{
+    text-align: center;
+    width: 240px;
+    height: 30px;
+}
+
+#tbl_nav > tbody > tr > td:hover{
+    background-color: var(--emerald);
+    transition-duration: 0.7s;
+    cursor: pointer;
+    border-radius: 15px;
+    color: var(--indigo);
+}
+
+#tbl_nav > tbody > tr > td > a{
+    font-family: var(--ft_ss);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    background-color: var(--rhythm);
+    margin:auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+main > article > h1,h2,h3{
+    color: var(--indigo);
+    padding-bottom: 10px;
+    padding-top: 15px;
+    text-align: center;
+}   
+
+main > article > p,li,a{
+    color: var(--white);
+    padding-bottom: 20px;
+    text-indent: 25px;
+}
+
+main a{
+    color: var(--indigo);
+    text-decoration: none;
+}
+
+.video{
+    background-color: var(--indigo);
+    padding: 20px;
+    padding-bottom: 55%;
+    position: relative;
+}
+
+.video iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--indigo);
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+aside a{
+    color: var(--lght_rhy);
+    text-decoration: none;
+}
+
+aside > h3{
+    color: var(--lght_rhy);
+    background-color: var(--dark_eme);
+    border-radius: 20px 0px;
+}
+
+aside > p{
+    color: var(--white);
+    margin: auto;
+    max-width: 95%;
+    text-indent: 25px;
+}
+
+aside > ul{
+    padding: 15px 0px 15px 0px;
+    list-style-type: '\1F4F1\00A0\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+aside > ul > li{
+    font-size: 12px;
+    margin: 0px 90px 0px 90px; 
+}
+
+footer{
+    background-color: var(--indigo);
+    color: var(--white);
+    text-align: center;
+}
+
+#p_footer{
+    font-family: var(--ft_sf);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    text-align: center;
+}
+
+h1{
+    font-family: var(--ft_sp);
+    font-size: 30px;
+}
+
+h2{
+    font-family: var(--ft_sp);
+    font-size: 25px;
+}
+
+h3{
+    font-family: var(--ft_sp);
+    font-size: 20px;
+}
+
+p,li,a{
+    font-family: var(--ft_ss);
+    font-size: 16px;
+}
+
+a.external::after{
+    content: '\00A0\1F517';
+}
+
+p{
+    text-align: justify;
+    line-height: 2em;
+}
+
+main a:hover,aside a:hover{
+    color: var(--emerald);
+    text-decoration: underline;
+}
+
+

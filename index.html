@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Matheus Zambon - Projetos</title>
+    <script src="https://kit.fontawesome.com/2936791d42.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="media/bc_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <section class="sec_sidebar">
+            <div class="div_intro">
+                <h1 class="h1_sb_name">Matheus Vieira Zambon</h1>
+                <nav class="nav_sb">
+                    <ul class="ul_nav_sb">
+                        <li class="li_ul_sb"><a href="index.html" class="a_ul_sb"><i class="fa-solid fa-file-code"></i>PROJETOS</a></li>
+                        <li class="li_ul_sb"><a href="sobre.html" class="a_ul_sb"><i class="fa-solid fa-circle-user"></i>SOBRE MIM</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="div_menu">
+                <h2 class="h2_tab_ctt">CONTATOS</h2>
+                <div class="div_tab_ctt">
+                    <button id="dflt" class="btn_tab_ctt" onclick="expandir(event, 'github')"><i class="fa-brands fa-github"></i></button>
+                    <button class="btn_tab_ctt" onclick="expandir(event, 'linkedin')"><i class="fa-brands fa-linkedin"></i></button>
+                    <button class="btn_tab_ctt" onclick="expandir(event, 'telefone')"><i class="fa-solid fa-phone"></i></button>
+                    <button class="btn_tab_ctt" onclick="expandir(event, 'email')"><i class="fa-solid fa-envelope"></i></button>
+                </div>
+                <div id="github" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">GITHUB</h3>
+                    <p class="p_ctt"><a href="https://github.com/MatheusVZambon" class="a_ctt" target="blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+                <div id="linkedin" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">LINKEDIN</h3>
+                    <p class="p_ctt"><a href="https://www.linkedin.com/in/matheus-zambon/" class="a_ctt" target="blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+                <div id="telefone" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">TELEFONE</h3>
+                    <p class="p_ctt">+55 (11) 96075-7455</p>
+                </div>
+                <div id="email" class="div_tab_con">
+                    <h3 class="h3_ctt_ttl">EMAIL</h3>
+                    <p class="p_ctt">matheuszambon2004@gmail</p>
+                </div>
+            </div>
+        </section>
+        <div class="div_pgname">
+            <h1 class="h1_page">Projetos</h1>
+        </div>
+        <section class="sec_main">
+            <article class="art_main">
+                <div class="div_main_proj">
+                    <h1 class="h1_ttl_proj"><a href="content/proj_modulodois/android.html" class="a_proj" target="blank">Central Android</a></h1>
+                    <img src="media/screenshot/ss_android.png" alt="" class="img_proj">
+                    <p class="p_desc_proj">Representação de página simples de um blog com foco no SO Android. Realizado com HTML/CSS<br>Feito em 2022.</p>
+                </div>
+                <div class="div_main_proj">
+                    <h1 class="h1_ttl_proj"><a href="content/easybike/index.html" class="a_proj" target="blank">EasyBike</a></h1>
+                    <img src="media/screenshot/ss_eb.png" alt="" class="img_proj">
+                    <p class="p_desc_proj">Landing Page de um serviço fictício de aluguel de motocicletas. Realizado com HTML/CSS. Totalmente responsivo.<br>Feito em 2022.</p>
+                </div>
+                <div class="div_main_proj">
+                    <h1 class="h1_ttl_proj"><a href="content/exc_js/index.html" class="a_proj" target="blank">Exercícios em JavaScript</a></h1>
+                    <img src="media/screenshot/ss_jsexc.png" alt="" class="img_proj">
+                    <p class="p_desc_proj">Página que reúne exercícios feitos integrando HTML,CSS e JS.<br>Feito em 2022.</p>
+                </div>
+            </article>
+            <article class="art_aviso">
+                <h2 class="h2_aviso"><span class="span_aviso">ATENÇÃO</span>: Todos os projetos estão sujeitos a alterações.</h2>
+            </article>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="sidebar_ctt.js"></script>
+</body>
+</html>

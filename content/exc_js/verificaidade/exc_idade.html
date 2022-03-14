@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <article>
+            <p>Nome : <input type="text" name="txt_nome" id="txt_nome" style="width:10em;"></p>
+            <p>Ano de nascimento: <input type="number" name="nmb_ano" id="nmb_ano" style="width:4em;"></p>
+            <p>Sexo de nascimento: <input type="radio" name="rd_sexo" id="rd_sexo" value="homem" checked> Masculino <input type="radio" name="rd_sexo" id="rd_sexo" value="mulher"> Feminino</p>
+            <p id="p_result"></p>
+            <div>
+            </div>
+            <p><input type="button" value="Cadastrar" onclick="verificar()" class="botao"><input type="button" value="Limpar" onclick="limpar()" class="botao"></p>
+        </article>
+    </main>
+    <footer>
+        <p>Desenvolvido por Matheus Zambon</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

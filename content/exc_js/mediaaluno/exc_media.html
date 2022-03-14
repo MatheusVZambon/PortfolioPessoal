@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cálculo de média do estudante</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Insira as notas bimestrais do aluno e o sistema retornará sua condição</h2>
+            <div>
+                <p>Nota do 1º bimestre : <input type="number" name="notab1" id="notab1" class="i_nota"> Nota do 2º bimestre : <input type="number" name="notab2" id="notab2" class="i_nota"></p>
+                <p>Nota do 3º bimestre : <input type="number" name="notab3" id="notab3" class="i_nota"> Nota do 4º bimestre : <input type="number" name="notab4" id="notab4" class="i_nota"></p>
+                <p><input type="button" value="Calcular" onclick="calcular()" class="botao"></p>
+                <p id="p_result"></p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>Desenvolvido por Matheus Zambon</p>
+    </footer>
+    <script>
+        function calcular(){
+            let nota1 = Number(document.getElementById('notab1').value)
+            let nota2 = Number(document.getElementById('notab2').value)
+            let nota3 = Number(document.getElementById('notab3').value)
+            let nota4 = Number(document.getElementById('notab4').value)
+            let media = (nota1 + nota2 + nota3 + nota4) / 4
+            
+            const lista_notas = [nota1, nota2, nota3, nota4]
+
+            for (let nota in lista_notas){
+                if (lista_notas[nota] < 0 || lista_notas[nota] > 10){
+                    document.getElementById('p_result').innerText = 'Nota(s) Inválida(s). Por favor, tente novamente.'
+                    break
+                }
+                else{
+                    if (media >= 5){
+                        document.getElementById('p_result').innerText = `Aprovado com ${media.toFixed(2)}. Parabéns!`
+                    }
+                    else{
+                        document.getElementById('p_result').innerText = `Reprovado com ${media.toFixed(2)}. Estude mais na próxima.`
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

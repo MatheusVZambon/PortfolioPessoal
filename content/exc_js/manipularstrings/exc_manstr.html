@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Strings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Manipulando strings</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Insira seu nome e sobrenome e aperte o botão</h2>
+            <div>
+                <p>Nome: <input type="text" name="txt_nome" id="txt_nome"> Sobrenome: <input type="text" name="txt_sn" id="txt_sn"></p>
+                <p><input type="button" value="Pressione Aqui!" onclick="manipular()" class="botao"><input type="button" value="Limpar" onclick="limpar()" class="botao"></p>
+                <br>
+                <p id="p_exibir" style="text-align:left; margin-left: 30%;"></p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>Desenvolvido por Matheus Zambon</p>
+    </footer>
+    <script>
+        function manipular(){
+            let nome = String(document.getElementById('txt_nome').value)
+            let s_nome = String(document.getElementById('txt_sn').value)
+            let upper = nome.toUpperCase() + " " + s_nome.toUpperCase()
+            let lower = nome.toLowerCase() + " " + s_nome.toLowerCase()
+            let nome_len = nome.length
+            let s_nome_len = s_nome.length
+            let inteiro_len = nome_len + s_nome_len
+            let p_letras = nome[0].toUpperCase() + " & " + s_nome[0].toUpperCase()   
+            let u_letras = nome[nome_len - 1].toUpperCase() + " & " + s_nome[s_nome_len - 1].toUpperCase()
+            let capt = nome[0].toUpperCase() + nome.slice(1,nome_len).toLowerCase() + " " + s_nome[0].toUpperCase() + s_nome.slice(1,s_nome_len).toLowerCase()
+
+            document.getElementById('p_exibir').innerHTML = `Nome captalizado: ${capt} <br> Nome em maiúsculas: ${upper} <br> Nome em minúsculas: ${lower} <br> O nome tem ${nome_len} letras <br> O sobrenome tem ${s_nome_len} letras <br> No total o nome tem ${inteiro_len} letras <br> As primeiras letras são ${p_letras} <br> As últimas letras são ${u_letras}`
+        }
+        function limpar(){
+            document.getElementById('txt_nome').value = ""
+            document.getElementById('txt_sn').value = ""
+            document.getElementById('p_exibir').innerText = ""
+        }
+    </script>
+</body>
+</html>
