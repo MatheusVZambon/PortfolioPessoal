@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada Simples</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Digite um número e a tabuada dele (até 10) será exibida</h2>
+            <p>Número : <input type="number" name="nmb_contagem" id="nmb_tabuada">
+            <p id="p_botoes"><input type="button" value="Calcular" onclick="calc_tabuada()" class="botao"></p>
+            <select name="slc_tabuada" id="slc_tabuada" size="10"></select>
+        </article>
+    </main>
+    <footer>
+        <p>Desenvolvido por Matheus Zambon</p>
+        <p><input type="button" value="Voltar" onclick="voltar()" class="botao"></p>
+    </footer>
+    <script src="exc_tab.js"></script>

@@ -4,27 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios JS</title>
-    <link rel="stylesheet" href="cent_style.css">
+    <title>Central de Exercícios | JavaScript</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="index-media/favicon.ico" type="image/x-icon"> 
 </head>
 <body>
     <header>
-        <h1>Exercícios de JavaScript</h1>
-        <h2>Estão aqui, todos os exercícios realizados por mim, na linguagem de programação JavaScript.</h2>
+        <div id="div-header-fl">
+            <img src="index-media/js-logo.png" alt="" id="img-header-logo">
+            <h1 id="h1-ttl-header">Coletânea de Exercícios JavaScript</h1>
+        </div>
+        <h2 id="h2-stt-header">Lista de exercícios realizados para estudar a linguagem JavaScript</h2>
     </header>
     <main>
-        <section>
-            <ol>
-                <li><a href="diatardenoite/exc_dtn.html">Cumprimento dia/tarde/noite</a></li>
-                <li><a href="verificaidade/exc_idade.html">Verificador de Idade</a></li>
-                <li><a href="calculadora/exc_clc.html">Calculadora Simples</a></li>
-                <li><a href="manipularstrings/exc_manstr.html">Manipulação de Strings</a></li>
-                <li><a href="mediaaluno/exc_media.html">Média de Estudante</a></li>
-            </ol>
-        </section>
+        <div id="div-uls-container">
+            <div class="div-uls-column">
+                <ul class="ul-links-main">
+                    <li><a href="calculadora/exc_clc.html" target="_blank">Calculadora Simples</a></li>
+                    <li><a href="contagem/exc_contg.html" target="_blank">Contador</a></li>
+                </ul>
+            </div>
+            <div class="div-uls-column">
+                <ul class="ul-links-main">
+                    <li><a href="diatardenoite/exc_dtn.html" target="_blank">Dia/Tarde/Noite</a></li>
+                    <li><a href="manipulararrays/exc_manarr.html" target="_blank">Manipulação de Arrays</a></li>
+                </ul>
+            </div>
+            <div class="div-uls-column">
+                <ul class="ul-links-main">
+                    <li><a href="manipularstrings/exc_manstr.html" target="_blank">Manipulação de Strings</a></li>
+                    <li><a href="mediaaluno/exc_media.html" target="_blank">Média de Notas de Aluno</a></li>
+                </ul>
+            </div>
+            <div class="div-uls-column">
+                <ul class="ul-links-main">
+                    <li><a href="tabuada/exc_tab.html" target="_blank">Tabuada Simples</a></li>
+                    <li><a href="verificaidade/exc_idade.html" target="_blank">Verificador de Idade</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
-        <h2>Desenvolvido por Matheus Zambon</h2>
+        <h2 id="h2-autor-footer">Desenvolvido por Matheus Zambon - 2022</h2>
     </footer>
 </body>
 </html>
+
+<!-- Atribuições
+    Desenvolvimento : Matheus Vieira Zambon
+    Mídia : Freepik (Atribuição Requerida) https://br.freepik.com
+-->
