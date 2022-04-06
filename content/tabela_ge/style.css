@@ -1,0 +1,959 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* ----- Fontes ----- 
+        Open Sans - Todas as Informações, nomes dos times, placares e tabela
+	    Proxima Nova Bold - Títulos do Grupo e rodada
+        Proxima Nova Light - Nome do campeonato
+    */
+    --pnbl : 'Cabin', Verdana, Arial;
+    --opsn : 'Open Sans', sans-serif, Verdana, Arial;
+
+    /* ----- Cores ----- 
+        #06AA49 - Verde
+        #111111 - Preto
+        #FCFCFC - Branco
+        #C0C0C0 - Cinza Bordas
+        #F5F5F5 - Cinza Zebrado Tabela
+        #98999A - Cinza Infos Tabela
+        #0000FE - Azul Classificados
+        #52A17E - Verde Vitória e Subiu
+        #FF0101 - Vermelho Derrota e Caiu
+    */
+    --vpri : #06AA49;
+    --ppri : #111111;
+    --bpri : #FCFCFC;
+    --cbor : #C0C0C0;
+    --ctbl : #F5F5F5;
+    --cinf : #98999A;
+    --acla : #0000FE;
+    --vvit : #52A17E;
+    --vder : #FF0101;
+    --vrgl : #FB0234;
+    --mrgl : #C4170C;
+    --lrgl : #FF6700;
+}
+
+
+body{
+    background-color: var(--bpri);
+}
+
+/* --------------- Cabeçalho --------------- */
+header{
+    background-color: var(--vpri);
+
+    height: 5.5em;
+
+    padding-bottom: 0.6em;
+
+    margin-bottom: 2.5em;
+}
+
+div.div-header-rede{
+    background-color: var(--ctbl);
+    color: var(--cbor);
+
+    height: 2em;
+    padding: 0.25em 0em 0.25em 0.65em;
+    line-height: 2em;
+}
+
+span.span-header-rede{
+    font: bold normal 1em Arial;
+
+    padding-right: 0.3em;
+}
+
+span#span-header-gc{
+    color: var(--acla);
+}
+
+span#span-header-g1{
+    color: var(--mrgl);
+}
+
+span#span-header-ge{
+    color: var(--vpri);
+}
+
+span#span-header-gs{
+    color: var(--lrgl);
+}
+
+span#span-header-gp{
+    color: var(--vrgl);
+}
+
+div.div-header-logo{
+    width: 10%;
+
+    display: inline-block;
+
+    text-align: center;
+}
+
+div.div-header-txt{
+    width: 89%;
+
+    display: inline-block;
+
+    text-align: center;
+
+    vertical-align: middle;
+}
+
+img.img-header-logo{
+    vertical-align: middle;
+}
+
+h1.h1-header-ttl{
+    font: 400 normal 2rem var(--pnbl);
+    color: var(--bpri);
+
+    vertical-align: middle;    
+}
+
+/* --------------- Main - Nav/IFrame Fase --------------- */
+nav.nav-fase{
+    width: 90%;
+
+    text-align: center;
+
+    border-top: 2px solid var(--cbor);
+    border-bottom: 2px solid var(--cbor);
+
+    margin: auto;
+    margin-bottom: 4em;
+
+    padding: 1em 0em;
+}
+
+i#fase-inactive-inicio{
+    color: var(--cinf);
+    cursor: default;
+}
+
+i#fase-inactive-fim{
+    color: var(--cinf);
+    cursor: default;
+}
+
+h2.h2-nav-ttl{
+    font: bold normal 1.75rem var(--pnbl);
+    color: var(--ppri);
+
+    display: inline-block;
+}
+
+.nav-fase i.fa-arrow-right{
+    float: right;
+    line-height: 34px;
+    color: var(--vpri);
+}
+
+.nav-fase i.fa-arrow-left{
+    float: left;
+    line-height: 34px;
+    color: var(--vpri);
+}
+
+h2#h2-pri-fase{
+    text-align: center;
+}
+
+iframe#iframe-p-fase{
+    height: auto;
+    width: 100%;
+
+    margin-bottom: 3.5em;
+}
+
+div.div-jogo-ff{
+    width: 90%;
+
+    margin: auto;
+    margin-bottom: 2.5em;
+
+    border: 1px solid var(--cbor);
+    border-radius: 0.25em;
+}
+
+p.p-num-jogo{
+    font: normal normal 0.8rem var(--opsn);
+    color: var(--cinf);
+
+    background-color: var(--bpri);
+
+    width: 6em;
+
+    border: 1px solid var(--cbor);
+    border-radius: 4em;
+
+    text-align: center;
+
+    position: absolute;
+    left: 50%;
+    margin-left: -3em;
+    margin-top: -1em;
+
+    z-index: 1;
+}
+
+/* --------------- Main - Grupos --------------- */
+div.div-grid-main{
+    width: 90%;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+section.sec-main-grupos{
+    border-right: 1px solid var(--cbor);
+
+    padding-right: 1.5em;
+}
+
+table.tbl-sec-grupos{
+    border-collapse: collapse;
+
+    overflow-x: scroll;
+}
+
+table.tbl-sec-grupos > tbody{
+    overflow-x: scroll;
+}
+
+table#tbl-sec-grupos-geral{
+    width: 90%;
+
+    margin-left: 5%;
+
+    display: none;
+}
+
+table#tbl-sec-grupos-geral td{
+    width: 4.5%;
+}
+
+col.col-principal{
+    border-right: 1px solid var(--cbor);
+}
+
+caption.capt-tbl-grupos{
+    font: normal normal 1.8rem var(--pnbl);
+    color: var(--ppri);
+    text-align: left;
+
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.tbl-sec-grupos th{
+    width: 5em;
+
+    font: normal normal 0.6em var(--opsn);
+    color: var(--cinf);
+
+    text-align: center;
+
+    padding: 1.35em 0em;
+
+    border-top: 1px solid var(--cbor);
+    border-bottom: 1px solid var(--cbor);
+}
+
+.tbl-sec-grupos .th-class{
+    width: 33%;
+
+    text-align: left;
+}
+
+.tbl-sec-grupos .th-ultjogos{
+    width: 10%;
+}
+
+.tbl-sec-grupos td{
+    width: 6.3%;
+
+    font: normal normal 0.9em var(--opsn);
+    color: var(--ppri);
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding: 0.8em 0.3em;
+
+    border-bottom: 1px solid var(--cbor);
+}
+
+.tbl-sec-grupos .td-time{
+    font: normal normal 1.1em var(--opsn);
+    text-align: left;
+}
+
+.tbl-sec-grupos .td-pont{
+    font: bold normal 0.9em var(--opsn);
+}
+
+.tbl-sec-grupos > tbody td:nth-child(2n){
+    background-color: var(--ctbl);
+}
+
+p.p-time{
+    display: inline;
+}
+
+span.span-tbl-class{
+    color: var(--acla);
+    padding-right: 1em;
+}
+
+span.span-tbl-class-null{
+    color: var(--cinf);
+    padding-right: 1em;
+}
+
+span.span-tbl-class-reb{
+    color: var(--vder);
+    padding-right: 1em;
+}
+
+span.span-tbl-status{
+    font-size: 0.7rem;
+    color: var(--cinf);
+    float: right;
+    margin-right: 0.7em;
+    margin-top: 0.35em;
+}
+
+i.icn-null{
+    font-size: 0.7rem;
+    color: var(--cbor);
+    padding: 0em 0.3em;
+}
+
+i.icn-cima{
+    font-size: 0.7rem;
+    color: var(--vvit);
+    padding: 0em 0.3em;
+}
+
+i.icn-baixo{
+    font-size: 0.7rem;
+    color: var(--vder);
+    padding: 0em 0.3em;
+}
+
+i.icn-vit{
+    font-size: 0.45rem;
+    color: var(--vvit);
+    padding: 0em 0.1em;
+
+    margin-bottom: 1em;
+}
+
+i.icn-emp{
+    font-size: 0.45rem;
+    color: var(--cinf);
+    padding: 0em 0.1em;
+
+    margin-bottom: 1em;
+}
+
+i.icn-der{
+    font-size: 0.45rem;
+    color: var(--vder);
+    padding: 0em 0.1em;
+
+    margin-bottom: 1em;
+}
+
+h3.h3-class-legenda{
+    font: bold normal 1rem var(--pnbl);
+
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+}
+
+span.span-legenda{
+    font: normal normal 0.8rem var(--pnbl);
+    text-decoration: underline;
+
+    padding: 0em 0.75em;
+}
+
+span#sl-azul{
+    color: var(--acla);
+    padding-left: 0em;
+}
+
+span#sl-null{
+    color: var(--cinf);
+}
+
+span#sl-rebx{
+    color: var(--vder);
+}
+   
+span.span-legenda-seq{
+    font: normal normal 0.8rem var(--pnbl);
+
+    padding: 0em 0.75em;
+}
+
+span#sl-vit, span#sl-cim{
+    color: var(--vvit);
+    padding-left: 0em;
+}
+
+span#sl-emp, span#sl-mtv{
+    color: var(--cinf);
+}
+
+span#sl-der, span#sl-bxo{
+    color: var(--vder);
+}
+
+span.span-legenda-crt{
+    font: normal normal 0.8rem var(--pnbl);
+    padding-right: 0.3em;
+    margin-top: 5em;
+}
+
+div.div-main-switch{
+    margin-left: 5%;
+    margin-top: 2em;
+}
+
+h3.h3-ttl-switch{
+    font: bold normal 1rem var(--pnbl);
+    color: var(--ppri);
+}
+
+label.lbl-switch-class{
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2.2em;
+}
+  
+label.lbl-switch-class input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+span.span-switch-class{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cinf);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 2em;
+}
+  
+span.span-switch-class:before{
+    position: absolute;
+    content: "";
+    height: 1.6em;
+    width: 1.6em;
+    left: 0.25em;
+    bottom: 0.25em;
+    background-color: var(--bpri);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + span.span-switch-class{
+    background-color: var(--vpri);
+}
+  
+input:focus + span.span-switch-class{
+    box-shadow: 0 0 1px var(--vpri);
+}
+  
+input:checked + span.span-switch-class:before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* --------------- Main - Rodadas --------------- */
+section.sec-main-rodadas{
+    padding-left: 1.5em;
+}
+
+h2.h2-rodadas-ttl{
+    font: normal normal 1.8rem var(--pnbl);
+    color: var(--ppri);
+    text-align: left;
+
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+div.div-num-rodadas{
+    padding: 0.65em 0em;
+    
+    border-top: 1px solid var(--cbor);
+    border-bottom: 1px solid var(--cbor);
+
+    text-align: center;
+}
+
+h3.h3-rodadas-stt{
+    font: bold normal 1rem var(--pnbl);
+    color: var(--ppri);
+
+    display: inline;
+}
+
+div.div-num-rodadas i.fa-solid{
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    color: var(--vpri);
+    cursor: pointer;
+}
+
+div.div-num-rodadas i.fa-arrow-right{
+    float: right;
+    line-height: 19px;
+}
+
+div.div-num-rodadas i.fa-arrow-left{
+    float: left;
+    line-height: 19px;
+}
+p.p-top-jogo{
+    font: bold normal 0.7em var(--opsn);
+    color: var(--ppri);
+    text-align: center;
+
+    padding-top: 1em;
+}
+
+span.span-estadio-jogo{
+    color: var(--cinf);
+}
+
+div.div-align{
+    position: relative;
+    vertical-align: middle;
+    transform: translateY(25%);
+}
+
+p.p-bot-jogo{
+    font: bold normal 0.7em var(--opsn);
+    color: var(--vpri);
+    text-align: center;
+
+    padding-bottom: 1em;
+
+    border-bottom: 1px solid var(--cbor);
+}
+
+p.p-bot-jogo-ff{
+    font: bold normal 0.7em var(--opsn);
+    color: var(--vpri);
+    text-align: center;
+
+    padding-bottom: 1em;
+}
+
+article.art-rodadas-jogos{
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+
+    padding: 1em 0em;
+
+    align-items: center;
+}
+
+div.div-jogo-casa{
+    text-align: right;
+
+    height: 2.5em;
+}
+
+img.img-escudo-jogo, img.img-escudo-jogo-ff{
+    height: 2.5em;
+    vertical-align: middle;
+    
+    float: right;
+
+    padding-left: 1em;
+}
+
+.div-jogo-fora img{
+    float: left;
+
+    padding-left: 0em;
+    padding-right: 1em;
+}
+
+p.p-jogo-sigla{
+    font: normal normal 1.2em var(--opsn);
+    color: var(--ppri);
+
+    width: 2em;
+
+    display: inline-block;
+}
+
+p.p-jogo-sigla-ff, p.p-jogo-sigla-ff-md{
+    font: normal normal 1.2em var(--opsn);
+    color: var(--ppri);
+
+    width: 10em;
+
+    display: inline-block;
+}
+
+.sigla-elim{
+    opacity: 0.35;
+}
+
+div.div-jogo-res{
+    height: 2.5em;
+}
+
+p.p-jogo-res{
+    font: bold normal 1.2em var(--opsn);
+    color: var(--ppri);
+
+    line-height: 1.75em;
+
+    text-align: center;
+}
+
+span.span-jogo-x{
+    font-weight: normal;
+    font-size: 0.7em;
+    color: var(--cinf);
+
+    padding: 0em 0.3em;
+}
+
+div.div-jogo-fora{
+    text-align: left;
+
+    height: 2.5em;
+}
+
+/* --------------- Main - Artilharia --------------- */
+
+h2.h2-artilheiros-ttl{
+    font: normal normal 1.8rem var(--pnbl);
+    color: var(--ppri);
+
+    padding-bottom: 2.5em;
+    margin: auto;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--cinf);
+
+    width: 90%;
+}
+
+table#tbl-artilheiros{
+    margin-left: auto;
+    margin-right: auto;
+
+    border-collapse: collapse;
+
+    width: 90%;
+
+    display: block;
+    position: relative;
+
+    height: 32em;
+
+    overflow-y: scroll;
+}
+
+table#tbl-artilheiros thead{
+    position: sticky;
+    top: 0;
+}
+
+th.th-tbl-art{
+    font: normal normal 0.8rem var(--opsn);
+    color: var(--cinf);
+
+    background-color: var(--ctbl);
+
+    padding: 1.1em 0em;
+
+    width: 30%;
+}
+
+table#tbl-artilheiros td{
+    border-collapse: collapse;
+
+    padding: 0.75em 0em;
+
+    border-bottom: 1px solid var(--cbor);
+}
+
+td.td-jgd{
+    text-align: center;
+
+    width: 40%;
+}
+
+img.img-jgd-art{
+    width: 70px;
+    height: 70px;
+
+    border-radius: 5em;
+}
+
+p.p-nome-jgd{
+    font: normal normal 1.25rem var(--opsn);
+    color: var(--ppri);
+    
+    text-align: center;
+}
+
+td.td-escudo{
+    width: 20%;
+    text-align: center;
+}
+
+img.img-esc-art{
+    height: 4em;
+}
+
+td.td-pos-jgd{  
+    font: bold normal 1.25rem var(--opsn);
+    color: var(--cinf);
+    
+    text-align: center;
+
+    width: 30%;
+}
+
+td.td-gols-jgd{
+    font: bold normal 1.25rem var(--opsn);
+    color: var(--ppri);
+    
+    text-align: center;
+
+    width: 10%;
+}
+
+/* --------------- Footer --------------- */
+
+footer{
+    background-color: var(--vpri);
+
+    padding: 1em;
+    margin-top: 7.5em;
+
+    font: normal normal 0.8rem var(--opsn);
+    color: var(--bpri);
+}
+
+div.div-footer-logo{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+div.div-footer-text{
+    display: inline-block;
+
+    vertical-align: middle;
+
+    width: 90%;
+}
+
+span.span-footer-fl, span.span-footer-sl{
+    float: right;
+}
+
+span.span-footer-sl{
+    margin-right: -7.2em;
+}
+
+div.div-footer-sl{
+    margin-top: 1em;
+}
+
+p.p-footer-sl{
+    margin-left: 1.5em;
+}
+
+
+/*
+--------------------------------------------------
+    MEDIA QUERIES ZONE
+    Cabeçalho: Não Quebra
+    Grupos: 1050px
+    Jogos: 1170px
+    Classificação Geral : 
+    Artilharia: Não Quebra
+    Footer: 970px
+    Fase Final: 835px
+--------------------------------------------------
+*/
+
+/* -------------------- Mobile --------------------*/
+
+@media screen and (max-width:1050px){
+    div#div-grid-main{
+        grid-template-columns: 100%;
+    }
+    section.sec-main-rodadas{
+        height: 70em;
+        width: 100%;
+
+        padding-left: 0em;
+    }
+    section.sec-main-grupos{
+        border-right: none;
+        width: 100%;
+    }
+    div.div-main-class-geral{
+        width: 100%;
+    }
+    table.tbl-sec-grupos{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 970px){
+    footer{
+        height: 16em;
+    }
+    div.div-footer-logo, div.div-footer-text{
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+    }
+    p.p-footer-fl{
+        text-align: center;
+
+        padding-top: 1em;
+    }
+    span.span-footer-fl{
+        float: none;
+
+        display: none;
+    }
+    p.p-footer-sl{
+        width: auto;
+
+        margin-left: 0em;
+
+        padding-top: 1em;
+    }
+    span.span-footer-sl{
+        padding-top: 1em;
+
+        width: 100%;
+
+        margin-right: 0em;
+
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 850px){
+    img.img-escudo-jogo-ff{
+        float: left;
+
+        width: 100%;
+
+        text-align: center;
+
+        margin-top: -0.5em;
+    }
+    img.ff-mandante{
+        float: right;
+    }
+    p.p-jogo-sigla-ff{
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width:700px){
+    header{
+        height: 8em;
+    }
+    div.div-header-logo, div.div-header-txt{
+        display: block;
+
+        width: 100%;
+    }
+    table.tbl-sec-grupos{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    p.p-time[p-time-abr]::after{
+        content: attr(p-time-abr);
+    }
+    .tbl-sec-grupos .td-time{
+        font-size: 0.85em;
+    }
+    p.p-time{
+        margin-left: -1em;
+    }
+    span.span-tbl-status, i.icn-baixo, i.icn-cima, i.icn-null{
+        font-size: 0.6em;
+        text-align: right;
+    }
+    p.p-time > span{
+        display: none;
+    }
+    div.div-main-switch{
+        margin-top: 3.5em;
+    }
+    p.p-nome-jgd, td.td-pos-jgd{
+        font-size: 0.8em;
+    }
+    img.img-jgd-art{
+        height: 50px;
+        width: 50px;
+    }
+    img.img-esc-art{
+        height: 2.25em;
+    }
+}
+
+@media screen and (max-width:17em){
+    iframe.iframe-rodada{
+        width: 100%;
+    }
+    p.p-jogo-sigla{
+        font-size: 0.85em;
+    }
+    img.img-escudo-jogo{
+        height: 2em;
+    }
+}
